@@ -13,11 +13,18 @@ interface ITodoProps {
   todoList: ITodoField[];
 }
 
+interface ITodoSort {
+  count: number;
+  sort: string;
+  page: number;
+  filter: null | {} | { completed: boolean };
+}
+
 export default function Todo({ todoList, elementCount }: any) {
   console.log('RENDERED');
   const [todoListState, setTodoList] = useState<ITodoField[]>([]);
   const [filterProps, setFilterProps] = useState({ completed: [] });
-  const [sortProps, setSortProps] = useState({
+  const [sortProps, setSortProps] = useState<ITodoSort>({
     count: 5,
     sort: 'titleasc',
     page: 0,
@@ -122,7 +129,7 @@ export default function Todo({ todoList, elementCount }: any) {
   }
 
   useEffect(() => {
-    setSortProps((value) => {
+    setSortProps((value: ITodoSort) => {
       const filter = filterProps.completed.length !== 0 ? filterProps : {};
       return { ...value, filter };
     });
@@ -173,7 +180,7 @@ export default function Todo({ todoList, elementCount }: any) {
               setFilterProps((value: any) => {
                 const arr = event.target.checked
                   ? [...value.completed, true]
-                  : value.completed.filter((a) => a !== true);
+                  : value.completed.filter((a: boolean) => a !== true);
                 return { completed: arr };
               });
             }}
@@ -188,7 +195,7 @@ export default function Todo({ todoList, elementCount }: any) {
               setFilterProps((value: any) => {
                 const arr = event.target.checked
                   ? [...value.completed, false]
-                  : value.completed.filter((a) => a !== false);
+                  : value.completed.filter((a: boolean) => a !== false);
                 return { completed: arr };
               });
             }}

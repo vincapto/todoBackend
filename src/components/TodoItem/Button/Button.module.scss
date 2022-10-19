@@ -1,0 +1,14 @@
+.button {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: purple;
+  font-size: 18px;
+  padding: 5px;
+  transition: all 0.3s ease;
+  border: 1px solid purple;
+  border-radius: 8px;
+  &:hover {
+    background-color: purple;
+    color: white;
+  }
+}

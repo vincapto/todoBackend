@@ -1,0 +1,13 @@
+.submitButton {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid purple;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  background: purple;
+  color: #fff;
+  &:hover {
+    color: purple;
+    background: #fff;
+  }
+}

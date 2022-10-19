@@ -1,0 +1,15 @@
+.input {
+  padding: 10px;
+  border: 1px solid purple;
+  border-radius: 10px;
+  outline: none;
+  &Wrapper {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.title {
+  font-size: 22px;
+  color: purple;
+}

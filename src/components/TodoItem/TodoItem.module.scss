@@ -1,0 +1,30 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  align-content: flex-start;
+  border: 2px solid purple;
+  padding: 5px;
+  border-radius: 8px;
+  &Content {
+    display: flex;
+  }
+  &Head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.title {
+  color: purple;
+  font-size: 22px;
+}
+
+.button {
+  &Wrapper {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,31 @@
+.todo {
+  &List {
+    box-sizing: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+  }
+}
+.pagination {
+  &Wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  &Item {
+    cursor: pointer;
+    padding: 10px;
+    color: purple;
+    background-color: #fff;
+    border: 1px solid purple;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    &:hover {
+      color: white;
+      background-color: purple;
+    }
+  }
+}
